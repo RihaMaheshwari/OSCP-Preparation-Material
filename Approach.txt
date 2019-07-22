@@ -1,13 +1,3 @@
-Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.4
-Creation-Date: 2018-11-14T11:26:19+05:30
-
-====== Approach ======
-Created Wednesday 14 November 2018
-
-
-**CINAP TNOD**
-
 **Windows Priv Esc-**
 Powerup - vaibhav - https://github.com/EmpireProject/Empire/tree/master/data/module_source/privesc
 http://hackingandsecurity.blogspot.com/2017/09/oscp-windows-priviledge-escalation.html
