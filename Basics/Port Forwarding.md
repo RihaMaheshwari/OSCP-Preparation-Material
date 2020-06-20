@@ -3,7 +3,7 @@
 Port forwarding is a traffic manipulation technique.
 ```
 1. apt-get install rinetd
-2. cat [[/etc/rinetd.conf]]
+2. cat /etc/rinetd.conf
 3. <bindaddress	bindport	connectaddress	connectport>
 	<w.x.y.z		53		a.b.c.d			80>
 ```
@@ -22,7 +22,7 @@ Port forwarding is a traffic manipulation technique.
 	a. ssh -f -N -R 2222:127.0.0.1:22 root@<ip>
 ```
 
-# **HTTP Tunnelling**
+## **HTTP Tunnelling**
 ```
 1. nc -vvn <IP> <Port>
 2. CONNECT <IP>:<Port> HTTP/1.0
