@@ -1,4 +1,9 @@
 # **Buffer Overflow**
+
+**Understanding BO from Basic -** https://www.radiojitter.com/buffer-overflow-exploit-part-1/
+
+**BrainPan Exploit -** https://jagskap.blogspot.com/2019/06/brainpan-buffer-overflow.html
+
 ## **Exploit Overview**
 ```
 1. Fuzzing
