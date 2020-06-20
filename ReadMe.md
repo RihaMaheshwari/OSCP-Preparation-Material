@@ -2,9 +2,9 @@
 
 ## **OSCP Approach**
 For you to begin, I have divided the OSCP Preparation in three phases i.e. Pre-Enrolment, Post-Enrolment and Examination. Hope this helps!!
-```
+
 Approach for OSCP Examination - [(https://jagskap.blogspot.com/)]
-```
+
 Other Blogs to refer -
 ```
 https://www.secjuice.com/oscp-prep-guidance/
