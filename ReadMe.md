@@ -27,7 +27,7 @@ Other Blogs to refer -
 * Different ways to get shell - https://www.lanmaster53.com/2011/05/7-linux-shells-using-built-in-tools/
 * Spawning a TTY shell - https://netsec.ws/?p=337
 * Port Forwarding - https://www.howtoforge.com/port-forwarding-with-rinetd-on-debian-etch
-* Best Enumeration - http://www.0daysecurity.com/penetration-testing/enumeration.html
+* Best Enumeration - http://www.0daysecurity.com/penetration-testing/enumeration.html/https://github.com/MaximAdler/pentest-helper/blob/main/enumeration.md
 
 ## **Machines**
 #### **Beginners**
